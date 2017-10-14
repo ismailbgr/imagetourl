@@ -1,0 +1,42 @@
+﻿<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css.css">
+<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="js.js"></script>
+<script>
+
+</script>
+</head>
+<body>
+<h1>İnternetsiz Resim Gönderme</h1>
+<p><input class="cerceve" type="file" id="imageLoader" name="imageLoader"/></p>
+<p><canvas class="cerceve" id="imageCanvas" width ="50" height="50"></canvas></p>
+<p><select class="cerceve" onchange="change();" id="sizeselect"><option selected="" disabled="" hidden="">Boyut Seçiniz...</option><option value="50">Küçük</option><option value="100">Orta</option><option value="200">Büyük</option><option value="250">Çok Büyük</option></select></p>
+<p><button class="gizli" id="geturlbutton" onclick="create()">URL AL</button></p>
+<div id="urltable" class="gizli cerceve">
+<h3>URL:</h3>
+<div><p>Bu Urlyi Başkasına Gönderdiğinizde Eğer İnternet Tarayıcısına Yapıştırırsa İnternetsiz Görebilir</p><p>Bu Yazıyı Birine Mesaj İle Göncermek İçin <a id="countsms"></a> SMS Kullanırsınız</p></div>
+<p><input spellcheck="false" id="url"></input></p>
+</div>
+</body>
+<script>
+
+
+function create(){
+var canvas = document.getElementById('imageCanvas');
+var size = document.getElementById("sizeselect").value;
+$("#urltable").slideDown(1000);
+$("#url").slideDown(1000);
+dataurl = canvas.toDataURL()
+document.getElementById("url").value = dataurl
+countsms();
+}
+
+function change(){
+var canvas = document.getElementById('imageCanvas');
+var size = document.getElementById("sizeselect").value;
+canvas.width = size;
+canvas.height = size;
+}
+</script>
+</html>

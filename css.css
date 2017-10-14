@@ -1,0 +1,17 @@
+﻿h1{
+	color:blue;
+}
+
+body{
+	color:white;
+	text-shadow:-1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000;
+	background-color:lightgray;
+	text-align:center;
+}
+.gizli{
+display:none;
+}
+.cerceve{
+	padding:10px;
+	border: dashed 5px gray;
+}
