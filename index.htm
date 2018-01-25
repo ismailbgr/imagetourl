@@ -9,9 +9,9 @@
 </head>
 <body>
 <h1>İnternetsiz Resim Gönderme</h1>
-<p><input class="cerceve" type="file" id="imageLoader" name="imageLoader"/></p>
+<p><select class="cerceve" onchange="change();" id="sizeselect"><option value="0" selected="" disabled="" hidden="">Boyut Seçiniz...</option><option value="50">Küçük</option><option value="100">Orta</option><option value="200">Büyük</option><option value="250">Çok Büyük</option></select></p>
 <p><canvas class="cerceve" id="imageCanvas" width ="50" height="50"></canvas></p>
-<p><select class="cerceve" onchange="change();" id="sizeselect"><option selected="" disabled="" hidden="">Boyut Seçiniz...</option><option value="50">Küçük</option><option value="100">Orta</option><option value="200">Büyük</option><option value="250">Çok Büyük</option></select></p>
+<p><input class="cerceve" type="file" id="imageLoader" name="imageLoader"/></p>
 <p><button class="gizli" id="geturlbutton" onclick="create()">URL AL</button></p>
 <div id="urltable" class="gizli cerceve">
 <h3>URL:</h3>

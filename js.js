@@ -18,10 +18,17 @@ function handleImage(e){
             //canvas.width = img.width;
             //canvas.height = img.height;
 			var size = document.getElementById("sizeselect").value;
-			canvas.width = size;
+            if (size>0) {
+
+            canvas.width = size;
             canvas.height = size;
             ctx.drawImage(img,0,0,size,size);
-			$("#geturlbutton").slideDown(1000);
+            $("#geturlbutton").slideDown(1000);
+            }else{
+                alert("Önce Boyut Seçiniz!!!");
+                location.reload(true)
+            }
+			
         }
         img.src = event.target.result;
 		
